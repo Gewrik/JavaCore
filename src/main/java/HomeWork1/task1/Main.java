@@ -70,15 +70,16 @@ public class Main {
 
     public static int avgOfArray(int[][] twoDArray) {
         int avg;
+        int counter = 0;
         double sum = 0;
 
         for (int i = 0; i < twoDArray.length; i++) {
             for (int j = 0; j < twoDArray[i].length; j++) {
                 sum = sum + twoDArray[i][j];
-
+                counter++;
             }
         }
-        avg = (int) (sum / twoDArray.length);
+        avg = (int) (sum / counter);
         return avg;
     }
 
